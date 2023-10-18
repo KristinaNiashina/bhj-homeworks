@@ -9,12 +9,7 @@ rotators.forEach(item => {
             item.classList.remove('rotator__case_active');
         })
         rotatorCase[counter].classList.add('rotator__case_active');
-        if(counter < 5){
-            counter++;
-        }
-        else{
-            counter = 0;
-        }
+        counter = (counter + 1) % 5;
     }
     setInterval(counterFunc, 1000);
 })
